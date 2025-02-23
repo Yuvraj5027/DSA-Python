@@ -1,0 +1,12 @@
+# Write a recursive function to convert a decimal number to its equivalent
+binary number
+
+def decimal_to_binary(n):
+    binary = ""
+    while n > 0:
+        binary = str(n % 2) + binary  # Get remainder and add to the front
+        n //= 2  # Divide number by 2
+    return binary if binary else "0"
+
+num = int(input("Enter a decimal number: "))
+print("Binary equivalent:", decimal_to_binary(num))
