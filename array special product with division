@@ -1,0 +1,13 @@
+# array special product with division
+
+import math
+c = np.array([1,2,3,4,5])
+def prod_ExceptSel(c):
+    total_product = math.prod(c)
+    prod_arr = []
+    for i in x:
+        prod_arr.append(total_product//i)
+    return np.array(prod_arr)
+print("Original array : ",c)
+result = prod_ExceptSel(c)
+print("Product array : ",result)
