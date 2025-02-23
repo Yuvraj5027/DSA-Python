@@ -1,0 +1,9 @@
+# Write a recursive function for GCD calculation
+
+def gcd(a, b):
+    return a if b == 0 else gcd(b, a % b)
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+print("GCD:", gcd(num1, num2))
