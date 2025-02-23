@@ -1,0 +1,14 @@
+# Write a recursive function to count the number of zeroes in an integer
+
+def count_zeroes(n):
+    # Base case: if the number is 0, return 1 (since there's one zero)
+    if n == 0:
+        return 1
+    # Base case: if the number is less than 10, there are no zeroes
+    elif n < 10:
+        return 0
+    # Recursive case: check the last digit and count zeroes in the rest of the number
+    return (1 if n % 10 == 0 else 0) + count_zeroes(n // 10)
+
+num = int(input("Enter an integer: "))
+print("Number of zeroes:", count_zeroes(num))
