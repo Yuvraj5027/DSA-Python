@@ -1,0 +1,6 @@
+a = np.array([10,20,30,40,50,10, 60])
+new_arr = []
+for i in a:
+    if i not in new_arr:
+        new_arr.append(i)
+print(new_arr)
