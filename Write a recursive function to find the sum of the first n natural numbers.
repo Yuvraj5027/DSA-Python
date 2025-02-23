@@ -1,0 +1,9 @@
+# Write a recursive function to find the sum of the first n natural numbers.
+
+def sum_of_natural_numbers(n):
+    if n == 0:
+        return 0
+    return n + sum_of_natural_numbers(n - 1)
+
+num = int(input("Enter a number: "))
+print("Sum of first", num, "natural numbers:", sum_of_natural_numbers(num))
