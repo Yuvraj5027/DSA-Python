@@ -1,0 +1,14 @@
+# array special product without division
+
+c = np.array([1,2,3,4,5])
+def prod_ExceptSel(c):
+    n = len(x)
+    res = [1]*n
+    for i in range(n):
+        for j in range(n):
+            if i !=j:
+                res[i]*=c[j]
+    return res
+print("Original array : ",c)
+result = prod_ExceptSel(c)
+print("Product array : ",result)
