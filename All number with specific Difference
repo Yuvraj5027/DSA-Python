@@ -1,0 +1,13 @@
+# ALl number with specific Difference
+low = 1
+n = int (input("Enter N value:"))
+d = int (input("Enter D value:"))
+high = n
+while low<=high:
+  mid=(low+high)//2
+  sum_d=sum(int(i)for i in str(mid))
+  if (mid-sum_d)<=2:
+    low=mid+1
+  else:
+    high=mid-1
+print(n-high)
