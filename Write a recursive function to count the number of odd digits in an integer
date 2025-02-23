@@ -1,0 +1,11 @@
+# Write a recursive function to count the number of odd digits in an integer
+
+def count_odd_digits(n):
+    # Base case: if number is 0, no more digits to check
+    if n == 0:
+        return 0
+    # Check if the last digit is odd
+    return (1 if n % 10 % 2 != 0 else 0) + count_odd_digits(n // 10)
+
+num = int(input("Enter an integer: "))
+print("Number of odd digits:", count_odd_digits(abs(num)))
