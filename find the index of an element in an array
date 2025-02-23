@@ -1,0 +1,14 @@
+# find the index of an element in an array
+b = np.array([10,20,30,40,50])
+s_ele = int(input())
+def i_ele(x, s_ele):
+    try:
+        n = len(b)
+        for i in range(n):
+            if x[i] == s_ele:
+                return i
+        raise ValueError("Element not found")
+    except ValueError:
+        return -1
+result = i_ele(x, s_ele)
+print(result)
