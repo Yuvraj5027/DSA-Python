@@ -1,0 +1,14 @@
+# move all zeros to end
+import numpy as np
+x = np.array([0,1,0,1,0,1,1,1])
+def Move_Zero_end(x):
+    count_0 = 0
+    store_1 = 0
+    for i in x:
+        if i==1:
+            store_1 +=1
+        else:
+            count_0 +=1
+    result = ([1]*store_1)+([0]*count_0)
+    return result
+print(Move_Zero_end(x))
