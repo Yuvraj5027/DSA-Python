@@ -1,0 +1,11 @@
+# last occurence of one
+import numpy as np
+arr = np.array([0, 1, 1, 0, 1, 0, 1, 0, 0])
+def last1_occur(arr):
+    index = -1
+    n = len(arr)
+    for i in range(n):
+        if arr[i] == 1:
+            index = i
+    return index
+print("Last index of one : ", last1_occur(arr))
