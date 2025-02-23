@@ -1,0 +1,9 @@
+# Write a recursive function to count the number of digits in an integer
+
+def count_digits(n):
+    if n == 0:
+        return 0
+    return 1 + count_digits(n // 10)
+
+num = int(input("Enter an integer: "))
+print("Number of digits:", count_digits(abs(num)) if num != 0 else 1)
