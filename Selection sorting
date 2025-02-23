@@ -1,0 +1,21 @@
+def selection_sort(list):
+    size = len(list)
+    for i in range(size-1):
+        min = list[i]
+        position = i
+        for j in range(i+1, size):
+            min = list[j]
+            position = j
+        if j != position:
+            temp = list[i]
+            list[i] = list[position]
+            list[position] = temp
+n = int(input("Enter the number of elements : "))
+list01 = []
+for i in range(n):
+    num = int(input("Enter the elements : "))
+    list01.append(num)
+
+selection_sort(list01)
+for i in range(n):
+    print(list01[i], end = " ")
