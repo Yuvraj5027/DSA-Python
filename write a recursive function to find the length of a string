@@ -1,0 +1,9 @@
+# write a recursive function to find the length of a string
+
+def string_length(s):
+    if s == "":
+        return 0
+    return 1 + string_length(s[1:])
+
+string = input("Enter a string: ")
+print("Length of the string:", string_length(string))
