@@ -1,0 +1,19 @@
+# Insert sorting algorithm
+def insertion_sort(list):
+    size=len(list)
+    for i in range(1,size):
+        temp = list[i]
+        j = i-1
+        while temp<list[j] and j>=0:
+            list[j+1]=list[j]
+            j=j-1
+            list[j+1]=temp
+n=int(input("Enter number of elements:"))
+lst=[]
+for i in range(n):
+    num=int(input("Enter elements:"))
+    lst.append(num)
+    insertion_sort(lst)
+print("The sorted elements are:")
+for i in range(n):
+    print(lst[i], end=" ") 
