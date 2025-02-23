@@ -1,0 +1,10 @@
+# write a recursive function to count the number of vowels in a string.
+
+def count_vowels(s):
+    vowels = "aeiouAEIOU"
+    if s == "":
+        return 0
+    return (1 if s[0] in vowels else 0) + count_vowels(s[1:])
+
+string = input("Enter a string: ")
+print("Number of vowels in the string:", count_vowels(string))
